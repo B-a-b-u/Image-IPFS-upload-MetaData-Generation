@@ -5,14 +5,9 @@ import { Link , useNavigate} from 'react-router-dom';
 import ViewImage from './ViewImage';
 import './ImgUpload.css'; 
 
-// import { create as ipfsHttpClient } from "ipfs-http-client"
-
-// const client = ipfsHttpClient("https://sepolia.infura.io/v0?projectId=530b24b23c5a481db78b4d8d6ce2df0c")
 function ImgUpload() {
-  // console.log("Client : ",client);
-  // const storage = new Web3Storage({ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDMwN0QyNjlGRUE5MDAzOEMyMjkwMmE3Q0UxMmFhNTAwQWRBMDEyNTkiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2OTQ2MjE0MDA3NTMsIm5hbWUiOiJTSUgifQ.maoe4zMtHYCrRoob_mDNW3INqxbDeRcAGIksCC_Hxn8" });
     // Creating web3 instance from api token
-    const storage = new Web3Storage({ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDMwN0QyNjlGRUE5MDAzOEMyMjkwMmE3Q0UxMmFhNTAwQWRBMDEyNTkiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2OTQ2MjE0MDA3NTMsIm5hbWUiOiJTSUgifQ.maoe4zMtHYCrRoob_mDNW3INqxbDeRcAGIksCC_Hxn8" });
+    const storage = new Web3Storage({ token: "Tpye you Web3.Storage API Key" });
     const navigate = useNavigate();
 
 
@@ -20,7 +15,7 @@ function ImgUpload() {
     const [fileDescription, setFileDescription] = useState('');
     const [fileRarity, setFileRarity] = useState('');
     const [fileCID, setFileCID] = useState('');
-    const [file, setFile] = useState(null); // Initialize as null
+    const [file, setFile] = useState(null);
     const [isuploading, setIsUploading] = useState(false);
   
       // Function to convert state variables to JSON
@@ -100,7 +95,6 @@ function ImgUpload() {
             }
         }}>Submit</button>
 
-        {/* {fileCID && setIsUploading(true)} */}
 
         {isuploading && (
         <>
@@ -114,8 +108,7 @@ function ImgUpload() {
       )}
 <button onClick={() => navigate(`/view/${fileCID}/${fileName}`)}>View Image</button>
 
-    {/* <button><Link to="/view">ViewImage</Link></button> */}
-        
+            
     </div>
   );
 }
